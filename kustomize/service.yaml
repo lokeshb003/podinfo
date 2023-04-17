@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: podinfo
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: podinfo
   ports:
@@ -11,3 +11,4 @@ spec:
       port: 80
       protocol: TCP
       targetPort: 80
+      nodePort: 30333
